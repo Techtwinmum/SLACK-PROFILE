@@ -15,48 +15,25 @@
         <h2 data-testid="slackUsername">techietwinmum </h2>
         <img src="img.png.jpg" alt="techietwinmum" data-testid="slackDisplayimage">
         <p data-testid="currentDayOftheWeek"></p>
-        <p data-testid="cuurentUTCTime"></p>
+        <p data-testid="currentUTCTime"></p>
         <h3 data-testid="mytrack">Frontend</h3>
         <a href="https://github.com/Techtwinmum/Slack-Profile.git" data-testid="githubURL">https://github.com/Techtwinmum/Slack-Profile.git</a>
 
 
     </div>
 
-   
-        <script>
-            function updateDateTime() {
-                // Create a new Date object to get the current date and time
-                var currentDate = new Date();
-    
-                // Format the date and time
-                var options = { weekday: 'long', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
-                var formattedDate = currentDate.toLocaleDateString(undefined, options);
-    
-                // Display the formatted date and time in the "currentDayOftheWeek" element
-                document.querySelector('[data-testid="currentDayOftheWeek"]').textContent = formattedDate;
-    
-                // Format the UTC time
-                var utcOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric', timeZone: 'UTC' };
-                var formattedUTCTime = currentDate.toLocaleTimeString(undefined, utcOptions);
-    
-                
-            }
-    
-            // Call the updateDateTime function to initially display the date and time
-            updateDateTime();
-    
-            // Update the date and time every second (1000 milliseconds)
-            setInterval(updateDateTime, 1000);
-        </script>
-    </body>
-    </html>
-    
 
+    <script>
+        function updateUTCTime() {
+            const currentUTC = new Date().toISOString();
+            document.getElementById("utc-time").textContent = "UTC Time: " + currentUTC;
+        }
 
+        // Call the updateUTCTime function to initially display the UTC time
+        updateUTCTime();
 
-
-
-
-
+        // Update the UTC time every second (1000 milliseconds)
+        setInterval(updateUTCTime, 1000);
+    </script>
 </body>
 </html>
