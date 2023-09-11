@@ -39,8 +39,7 @@
                 var utcOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric', timeZone: 'UTC' };
                 var formattedUTCTime = currentDate.toLocaleTimeString(undefined, utcOptions);
     
-                // Display the formatted UTC time in the "currentUTCTime" element
-                document.querySelector('[data-testid="currentUTCTime"]').textContent = "UTC Time: " + formattedUTCTime;
+                
             }
     
             // Call the updateDateTime function to initially display the date and time

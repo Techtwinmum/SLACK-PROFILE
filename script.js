@@ -18,11 +18,6 @@ function updateDateTime() {
 
 
 
-
-
-document.querySelector('[data-testid="currentDayOfTheeWeek"]').textContent = currentday = getCurrentDayOfTheWeek();
-document.querySelector('[data-testid="currentUTCTime"]').textContent = currentUTCTime();
-
 })
 
  
