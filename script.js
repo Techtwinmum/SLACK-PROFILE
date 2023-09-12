@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded", function() {
         const dayOfTheWeek = daysOfWeek[currentDate.getUTCDay()];
         const dayOfTheWeekElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
         if (dayOfTheWeekElement) {
-            dayOfTheWeekElement.textContent = "Day of the Week: " + dayOfTheWeek;
+            dayOfTheWeekElement.textContent =dayOfTheWeek;
         }
 
         // Display the UTC time
         const currentUTCTime = currentDate.toISOString(); // Format as ISO string
         const utcTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
         if (utcTimeElement) {
-            utcTimeElement.textContent = "UTC Time: " + currentUTCTime;
+            utcTimeElement.textContent =currentUTCTime;
         }
     }
 
