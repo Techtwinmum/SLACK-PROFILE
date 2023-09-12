@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // Display the UTC time
-        const currentUTCTime = currentDate.toISOString(); // Format as ISO string
+        const currentUTCTime = new Date().getTime()//
         const utcTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
         if (utcTimeElement) {
-            utcTimeElement.textContent =currentUTCTime;
+            utcTimeElement.textContent = currentUTCTime;
         }
     }
 
