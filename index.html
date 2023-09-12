@@ -14,7 +14,7 @@
     <div class="profile">
         <h2 data-testid="slackUsername">techietwinmum </h2>
         <img src="img.png.jpg" alt="techietwinmum" data-testid="slackDisplayimage">
-        <p data-testid="currentDayOftheWeek"></p>
+        <p data-testid="currentDayOfTheWeek"></p>
         <p data-testid="currentUTCTime"></p>
         <h3 data-testid="mytrack">Frontend</h3>
         <a href="https://github.com/Techtwinmum/Slack-Profile.git" data-testid="githubURL">https://github.com/Techtwinmum/Slack-Profile.git</a>
@@ -23,17 +23,6 @@
     </div>
 
 
-    <script>
-        function updateUTCTime() {
-            const currentUTC = new Date().toISOString();
-            document.getElementById("utc-time").textContent = "UTC Time: " + currentUTC;
-        }
-
-        // Call the updateUTCTime function to initially display the UTC time
-        updateUTCTime();
-
-        // Update the UTC time every second (1000 milliseconds)
-        setInterval(updateUTCTime, 1000);
-    </script>
+    
 </body>
 </html>

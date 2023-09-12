@@ -1,21 +1,22 @@
 document.addEventListener("DOMContentLoaded", function() {
-    function getCurrentDayOfTheWeek() {
-        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        const today = new Date();
-        const dayOfTheWeek = daysOfWeek[today.getUTCDay()];
-        return dayOfTheWeek;
-    }
-
     function updateDateTime() {
+        // Get the current date and time
         const currentDate = new Date();
         
         // Display the day of the week
-        const dayOfTheWeek = getCurrentDayOfTheWeek();
-        document.querySelector('[data-testid="currentDayOftheWeek"]').textContent = dayOfTheWeek;
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const dayOfTheWeek = daysOfWeek[currentDate.getUTCDay()];
+        const dayOfTheWeekElement = document.querySelector('[data-testid="currentDayOfTheWeek"]');
+        if (dayOfTheWeekElement) {
+            dayOfTheWeekElement.textContent = "Day of the Week: " + dayOfTheWeek;
+        }
 
         // Display the UTC time
-        var currentUTCTime = currentDate.toISOString(); // Format as ISO string
-        document.querySelector('[data-testid="currentUTCTime"]').textContent = "UTC Time: " + currentUTCTime;
+        const currentUTCTime = currentDate.toISOString(); // Format as ISO string
+        const utcTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
+        if (utcTimeElement) {
+            utcTimeElement.textContent = "UTC Time: " + currentUTCTime;
+        }
     }
 
     // Call the updateDateTime function to initially display the date and time
